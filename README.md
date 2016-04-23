@@ -1,4 +1,4 @@
-# Async Twitch API Wrapper
+# Async Twitch API Wrapper [![](https://jitpack.io/v/Dankeroni/java-async-http.svg)](https://jitpack.io/#Dankeroni/java-async-http)
 JTAW is a complete asynchronous java wrapper for interaction with v3 of the [Twitch API](https://github.com/justintv/Twitch-API).
 
 Please feel free to report any issues or contribute code.
