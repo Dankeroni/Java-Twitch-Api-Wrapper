@@ -28,7 +28,7 @@ public class Twitch {
     public Twitch(String baseUrl, int apiVersion) {
         authenticator = new Authenticator(DEFAULT_BASE_URL);
         // Instantiate resource connectors
-        resources = new HashMap<String, AbstractResource>();
+        resources = new HashMap<>();
         resources.put("channels", new ChannelsResource(DEFAULT_BASE_URL, DEFAULT_API_VERSION));
         resources.put("chat", new ChatResource(DEFAULT_BASE_URL, DEFAULT_API_VERSION));
         resources.put("games", new GamesResource(DEFAULT_BASE_URL, DEFAULT_API_VERSION));

@@ -31,8 +31,7 @@ public class TokenAuthorization {
         TokenAuthorization that = (TokenAuthorization) o;
 
         if (scopes != null ? !scopes.equals(that.scopes) : that.scopes != null) return false;
-        if (createdAt != null ? !createdAt.equals(that.createdAt) : that.createdAt != null) return false;
-        return !(updatedAt != null ? !updatedAt.equals(that.updatedAt) : that.updatedAt != null);
+        return createdAt != null ? createdAt.equals(that.createdAt) : that.createdAt == null && !(updatedAt != null ? !updatedAt.equals(that.updatedAt) : that.updatedAt != null);
     }
 
     @Override
@@ -48,7 +47,7 @@ public class TokenAuthorization {
     }
 
     public void setScopes(List<String> scopes) {
-        this.scopes = new ArrayList<Scopes>();
+        this.scopes = new ArrayList<>();
         for (String s : scopes) {
             this.scopes.add(Scopes.fromString(s));
         }

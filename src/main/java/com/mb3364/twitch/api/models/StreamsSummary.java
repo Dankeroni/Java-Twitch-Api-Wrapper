@@ -23,8 +23,7 @@ public class StreamsSummary {
 
         StreamsSummary that = (StreamsSummary) o;
 
-        if (channels != that.channels) return false;
-        return viewers == that.viewers;
+        return channels == that.channels && viewers == that.viewers;
     }
 
     @Override

@@ -26,8 +26,7 @@ public class Badge {
         Badge badge = (Badge) o;
 
         if (alpha != null ? !alpha.equals(badge.alpha) : badge.alpha != null) return false;
-        if (image != null ? !image.equals(badge.image) : badge.image != null) return false;
-        return !(svg != null ? !svg.equals(badge.svg) : badge.svg != null);
+        return image != null ? image.equals(badge.image) : badge.image == null && !(svg != null ? !svg.equals(badge.svg) : badge.svg != null);
     }
 
     @Override

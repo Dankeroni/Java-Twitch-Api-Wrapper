@@ -25,8 +25,7 @@ public class Emoticon {
 
         Emoticon emoticon = (Emoticon) o;
 
-        if (regex != null ? !regex.equals(emoticon.regex) : emoticon.regex != null) return false;
-        return !(images != null ? !images.equals(emoticon.images) : emoticon.images != null);
+        return regex != null ? regex.equals(emoticon.regex) : emoticon.regex == null && !(images != null ? !images.equals(emoticon.images) : emoticon.images != null);
 
     }
 

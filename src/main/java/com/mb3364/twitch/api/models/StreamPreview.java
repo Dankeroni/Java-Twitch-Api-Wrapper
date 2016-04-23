@@ -29,8 +29,7 @@ public class StreamPreview {
 
         if (small != null ? !small.equals(that.small) : that.small != null) return false;
         if (medium != null ? !medium.equals(that.medium) : that.medium != null) return false;
-        if (large != null ? !large.equals(that.large) : that.large != null) return false;
-        return !(template != null ? !template.equals(that.template) : that.template != null);
+        return large != null ? large.equals(that.large) : that.large == null && !(template != null ? !template.equals(that.template) : that.template != null);
 
     }
 

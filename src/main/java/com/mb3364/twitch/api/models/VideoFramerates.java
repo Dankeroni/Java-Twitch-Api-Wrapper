@@ -35,8 +35,7 @@ public class VideoFramerates {
         if (Double.compare(videoFramerates.medium, medium) != 0) return false;
         if (Double.compare(videoFramerates.mobile, mobile) != 0) return false;
         if (Double.compare(videoFramerates.high, high) != 0) return false;
-        if (Double.compare(videoFramerates.low, low) != 0) return false;
-        return Double.compare(videoFramerates.chunked, chunked) == 0;
+        return Double.compare(videoFramerates.low, low) == 0 && Double.compare(videoFramerates.chunked, chunked) == 0;
 
     }
 

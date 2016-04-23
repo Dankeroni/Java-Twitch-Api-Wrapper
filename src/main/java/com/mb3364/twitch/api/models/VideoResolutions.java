@@ -32,8 +32,7 @@ public class VideoResolutions {
         if (medium != null ? !medium.equals(that.medium) : that.medium != null) return false;
         if (mobile != null ? !mobile.equals(that.mobile) : that.mobile != null) return false;
         if (high != null ? !high.equals(that.high) : that.high != null) return false;
-        if (low != null ? !low.equals(that.low) : that.low != null) return false;
-        return !(chunked != null ? !chunked.equals(that.chunked) : that.chunked != null);
+        return low != null ? low.equals(that.low) : that.low == null && !(chunked != null ? !chunked.equals(that.chunked) : that.chunked != null);
 
     }
 

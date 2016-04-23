@@ -8,7 +8,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Teams {
 
-    private List<Team> teams = new ArrayList<Team>();
+    private List<Team> teams = new ArrayList<>();
 
     @Override
     public String toString() {

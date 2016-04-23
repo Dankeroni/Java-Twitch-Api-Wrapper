@@ -38,8 +38,7 @@ public class ChannelBadges {
         if (broadcaster != null ? !broadcaster.equals(that.broadcaster) : that.broadcaster != null) return false;
         if (mod != null ? !mod.equals(that.mod) : that.mod != null) return false;
         if (staff != null ? !staff.equals(that.staff) : that.staff != null) return false;
-        if (turbo != null ? !turbo.equals(that.turbo) : that.turbo != null) return false;
-        return !(subscriber != null ? !subscriber.equals(that.subscriber) : that.subscriber != null);
+        return turbo != null ? turbo.equals(that.turbo) : that.turbo == null && !(subscriber != null ? !subscriber.equals(that.subscriber) : that.subscriber != null);
     }
 
     @Override

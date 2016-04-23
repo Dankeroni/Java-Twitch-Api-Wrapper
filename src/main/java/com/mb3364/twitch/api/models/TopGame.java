@@ -23,8 +23,7 @@ public class TopGame {
         TopGame topGame = (TopGame) o;
 
         if (viewers != topGame.viewers) return false;
-        if (channels != topGame.channels) return false;
-        return !(game != null ? !game.equals(topGame.game) : topGame.game != null);
+        return channels == topGame.channels && !(game != null ? !game.equals(topGame.game) : topGame.game != null);
 
     }
 

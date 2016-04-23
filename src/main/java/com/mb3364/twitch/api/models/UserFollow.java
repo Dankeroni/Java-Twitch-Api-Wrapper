@@ -28,8 +28,7 @@ public class UserFollow {
         UserFollow that = (UserFollow) o;
 
         if (notifications != that.notifications) return false;
-        if (createdAt != null ? !createdAt.equals(that.createdAt) : that.createdAt != null) return false;
-        return !(channel != null ? !channel.equals(that.channel) : that.channel != null);
+        return createdAt != null ? createdAt.equals(that.createdAt) : that.createdAt == null && !(channel != null ? !channel.equals(that.channel) : that.channel != null);
 
     }
 

@@ -29,8 +29,7 @@ public class GameBox {
 
         if (large != null ? !large.equals(gameBox.large) : gameBox.large != null) return false;
         if (medium != null ? !medium.equals(gameBox.medium) : gameBox.medium != null) return false;
-        if (small != null ? !small.equals(gameBox.small) : gameBox.small != null) return false;
-        return !(template != null ? !template.equals(gameBox.template) : gameBox.template != null);
+        return small != null ? small.equals(gameBox.small) : gameBox.small == null && !(template != null ? !template.equals(gameBox.template) : gameBox.template != null);
 
     }
 

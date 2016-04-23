@@ -28,8 +28,7 @@ public class AuthenticationError {
 
         AuthenticationError that = (AuthenticationError) o;
 
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        return !(description != null ? !description.equals(that.description) : that.description != null);
+        return name != null ? name.equals(that.name) : that.name == null && !(description != null ? !description.equals(that.description) : that.description != null);
 
     }
 

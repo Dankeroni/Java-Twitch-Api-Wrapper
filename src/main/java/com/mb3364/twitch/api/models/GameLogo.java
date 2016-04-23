@@ -29,8 +29,7 @@ public class GameLogo {
 
         if (large != null ? !large.equals(gameLogo.large) : gameLogo.large != null) return false;
         if (medium != null ? !medium.equals(gameLogo.medium) : gameLogo.medium != null) return false;
-        if (small != null ? !small.equals(gameLogo.small) : gameLogo.small != null) return false;
-        return !(template != null ? !template.equals(gameLogo.template) : gameLogo.template != null);
+        return small != null ? small.equals(gameLogo.small) : gameLogo.small == null && !(template != null ? !template.equals(gameLogo.template) : gameLogo.template != null);
 
     }
 

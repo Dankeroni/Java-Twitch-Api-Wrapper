@@ -19,8 +19,7 @@ public class EmoticonImage {
 
         if (emoticonSet != that.emoticonSet) return false;
         if (height != that.height) return false;
-        if (width != that.width) return false;
-        return url.equals(that.url);
+        return width == that.width && url.equals(that.url);
 
     }
 

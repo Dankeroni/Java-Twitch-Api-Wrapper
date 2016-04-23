@@ -69,7 +69,7 @@ public class Authenticator {
      * @param authUrl    the URL to a custom authorize page.
      * @param successUrl the URL to a custom successful authentication page.
      * @param failUrl    the URL to a custom failed authentication page.
-     * @return
+     * @return <code>true</code> if access token was received, <code>false</code> otherwise
      */
     public boolean awaitAccessToken(URL authUrl, URL successUrl, URL failUrl) {
         if (clientId == null || redirectUri == null) return false;

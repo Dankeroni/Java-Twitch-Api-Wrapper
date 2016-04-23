@@ -25,8 +25,7 @@ public class SearchResult<T> {
 
         SearchResult<?> that = (SearchResult<?>) o;
 
-        if (total != that.total) return false;
-        return !(results != null ? !results.equals(that.results) : that.results != null);
+        return total == that.total && !(results != null ? !results.equals(that.results) : that.results != null);
 
     }
 

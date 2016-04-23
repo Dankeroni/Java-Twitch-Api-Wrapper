@@ -30,8 +30,7 @@ public class Error {
         Error that = (Error) o;
 
         if (statusCode != that.statusCode) return false;
-        if (statusText != null ? !statusText.equals(that.statusText) : that.statusText != null) return false;
-        return !(message != null ? !message.equals(that.message) : that.message != null);
+        return statusText != null ? statusText.equals(that.statusText) : that.statusText == null && !(message != null ? !message.equals(that.message) : that.message != null);
 
     }
 

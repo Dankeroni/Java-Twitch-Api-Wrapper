@@ -60,7 +60,7 @@ public class AuthenticationCallbackRequest implements Runnable {
      * @return Map of all GET parameter key value pairs
      */
     private static Map<String, String> extractQueryParams(String request) {
-        Map<String, String> params = new HashMap<String, String>();
+        Map<String, String> params = new HashMap<>();
 
         String[] parts = request.split("\\?", 2);
         if (parts.length < 2) {

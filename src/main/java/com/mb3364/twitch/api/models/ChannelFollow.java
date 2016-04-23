@@ -28,9 +28,7 @@ public class ChannelFollow {
         ChannelFollow channelFollow = (ChannelFollow) o;
 
         if (notifications != channelFollow.notifications) return false;
-        if (createdAt != null ? !createdAt.equals(channelFollow.createdAt) : channelFollow.createdAt != null)
-            return false;
-        return !(user != null ? !user.equals(channelFollow.user) : channelFollow.user != null);
+        return createdAt != null ? createdAt.equals(channelFollow.createdAt) : channelFollow.createdAt == null && !(user != null ? !user.equals(channelFollow.user) : channelFollow.user != null);
     }
 
     @Override

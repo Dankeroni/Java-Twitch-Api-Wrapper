@@ -30,8 +30,7 @@ public class Block {
         Block block = (Block) o;
 
         if (id != block.id) return false;
-        if (updatedAt != null ? !updatedAt.equals(block.updatedAt) : block.updatedAt != null) return false;
-        return !(user != null ? !user.equals(block.user) : block.user != null);
+        return updatedAt != null ? updatedAt.equals(block.updatedAt) : block.updatedAt == null && !(user != null ? !user.equals(block.user) : block.user != null);
 
     }
 
